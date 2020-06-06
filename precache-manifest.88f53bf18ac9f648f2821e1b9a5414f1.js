@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a80adc42528fad406b4fed7346387f12",
+    "revision": "2b20b0427878612b0846b063cab27bdb",
     "url": "/a-peeling-banana/index.html"
   },
   {
-    "revision": "33fdddfd6f235ff0ebf5",
-    "url": "/a-peeling-banana/static/css/main.ed352093.chunk.css"
+    "revision": "75bf30bb50618f74e6dc",
+    "url": "/a-peeling-banana/static/css/main.b8507556.chunk.css"
   },
   {
-    "revision": "d9517372688afe2bc8e6",
-    "url": "/a-peeling-banana/static/js/2.179f82ef.chunk.js"
+    "revision": "c5dd564fc3b0ea034790",
+    "url": "/a-peeling-banana/static/js/2.85dbfb07.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/a-peeling-banana/static/js/2.179f82ef.chunk.js.LICENSE.txt"
+    "url": "/a-peeling-banana/static/js/2.85dbfb07.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "33fdddfd6f235ff0ebf5",
-    "url": "/a-peeling-banana/static/js/main.0ce28bb7.chunk.js"
+    "revision": "75bf30bb50618f74e6dc",
+    "url": "/a-peeling-banana/static/js/main.deb359bf.chunk.js"
   },
   {
     "revision": "a39a94c9c22fc15ff51f",
