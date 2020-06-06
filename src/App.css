@@ -3,7 +3,7 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  width: 100%;
   pointer-events: none;
 }
 
@@ -20,6 +20,14 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.Search-input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'roboto';
 }
 
 @keyframes App-logo-spin {

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Container, Row, Col } from 'react-grid-system';
 import includes from 'lodash/includes'
 import logo from './assets/daily-harvest-logo.jpg'
 import resolveIngredientSearch, { getIngredientById } from './resolvers/ingredient-search'
@@ -57,8 +58,6 @@ function IngredientSearch () {
   
   useEffect(() => {
     const _searchResults = resolveIngredientSearch(searchValue)
-    console.log('search results')
-    console.log(_searchResults)
     setSearchResults(_searchResults)
   }, [searchValue])
 
@@ -68,20 +67,32 @@ function IngredientSearch () {
 
   return (
     <div>
-      <form>
-        <input placeholder={DEFAULT_PLACEHOLDER_TEXT} value={searchValue} type='search' onChange={handleInputChange}></input>
-      </form>
-      <ProductList products={searchResults} searchValue={searchValue} />
+      <Row>
+        <input className="Search-input" placeholder={DEFAULT_PLACEHOLDER_TEXT} value={searchValue} type='search' onChange={handleInputChange}></input>
+      </Row>
+      <Row>
+        <ProductList products={searchResults} searchValue={searchValue} />
+      </Row>
     </div>
   )
 }
 
 function App() {
   return (
-    <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
-      <IngredientSearch />
-    </div>
+    <Container>
+      <Row>
+        <Col sm={1}></Col>
+        <Col sm={10}>
+          <div className="App">
+            <Row>
+              <img style={{width: '100%'}} src={logo} className="App-logo" alt="logo" />
+            </Row>
+            <IngredientSearch />
+          </div>
+        </Col>
+        <Col sm={1}></Col>
+      </Row>
+    </Container>
   );
 }
 
