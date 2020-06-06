@@ -6,11 +6,11 @@ import logo from './assets/daily-harvest-logo.jpg'
 import resolveIngredientSearch, { getIngredientById } from './resolvers/ingredient-search'
 import './App.css'
 
-const DEFAULT_INGREDIENT_SEARCH = 'Organic Banana'
-const DEFAULT_PLACEHOLDER_TEXT = 'Hungry for ...'
-const DEFAULT_SIMULATED_NETWORK_DELAY_MILLISECONDS = 100
-const DEFAULT_DEBOUNCE_MILLISECONDS = 300
-const DEFAULT_SEARCH_RESULTS = resolveIngredientSearch(DEFAULT_INGREDIENT_SEARCH)
+export const DEFAULT_INGREDIENT_SEARCH = 'Organic Banana'
+export const DEFAULT_PLACEHOLDER_TEXT = 'Hungry for ...'
+export const DEFAULT_SIMULATED_NETWORK_DELAY_MILLISECONDS = 100
+export const DEFAULT_DEBOUNCE_MILLISECONDS = 300
+export const DEFAULT_SEARCH_RESULTS = resolveIngredientSearch(DEFAULT_INGREDIENT_SEARCH)
 
 /**
  * 
@@ -33,9 +33,10 @@ function ProductList ({ products, searchValue }) {
    */
   const buildBoldedIngredient = (ingredient, searchValue) => {
     let ingredientName = ingredient.name.trim() // trimming this just in case there is bad data in the DB
-    
-    const startIndex = ingredientName.toLowerCase().indexOf(searchValue.trim().toLowerCase()) // find the starting index of the searchValue in the ingredient name
-    const endIndex = startIndex + searchValue.length // find the endIndex by adding the length of the searchValue string
+    let _searchValue = searchValue.trim() // trim the input from the user
+
+    const startIndex = ingredientName.toLowerCase().indexOf(_searchValue.trim().toLowerCase()) // find the starting index of the searchValue in the ingredient name
+    const endIndex = startIndex + _searchValue.length // find the endIndex by adding the length of the searchValue string
 
     const prefixedText = ingredientName.substring(0, startIndex) // create a substring for any potential characters before the match
     const boldedText = ingredientName.substring(startIndex, endIndex) // create a substring that is characters that match the search and thus should be bold
@@ -83,7 +84,7 @@ function ProductList ({ products, searchValue }) {
 
   // return the enture <ul> and it's child <li>s
   return (
-    <ul>
+    <ul aria-label='product-list'>
       {productListItems}
     </ul>
   )
@@ -133,7 +134,7 @@ function IngredientSearch () {
     if (searchValue && searchResults.length === 0) { // if loading is false, searchValue is defined (the user has entered text), and the result array is 0, then return a "no results" type of messaging
       return (
         <Col>
-          <div className="SorryMessage">
+          <div araia-label='no-result-div' className="SorryMessage">
             <span>{`Sorry! Looks like we are fresh out of`}</span>
             <br></br>
             <span><i>{`"${searchValue}"`}</i></span>
@@ -152,7 +153,7 @@ function IngredientSearch () {
   return (
     <React.Fragment>
       <Row>
-        <input className="SearchInput" placeholder={DEFAULT_PLACEHOLDER_TEXT} value={searchValue} type='search' onChange={handleInputChange}></input>
+        <input aria-label='ingredient-search' className="SearchInput" placeholder={DEFAULT_PLACEHOLDER_TEXT} value={searchValue} type='search' onChange={handleInputChange}></input>
       </Row>
       <Row>
         { 

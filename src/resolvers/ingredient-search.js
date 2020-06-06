@@ -6,7 +6,7 @@ import { ingredients } from '../data/ingredients.json'
 import find from 'lodash/find'
 import reduce from 'lodash/reduce'
 import includes from 'lodash/includes'
-import filter from 'lodash/filter'
+import forEach from 'lodash/forEach'
 import intersection from 'lodash/intersection'
 
 /**
@@ -47,20 +47,23 @@ function resolveIngredientSearch(searchTerm) {
    * if the intersection of product.ingredient_ids and searchResultIngredientIds is greater than 0,
    * it means the product contains at least 1 matching ingredient, so return it in the result.
    */
-  const filtered = filter(products, product => {
+  let filtered = []
+  forEach(products, product => {
+    // create a copy of the product as not to modify input parameter
+    const _product = { ...product }
     // create the intersecting array
-    const matchingIngredientsIds = intersection(product.ingredient_ids, searchIngredientIds)
-
-    /**
+    const matchingIngredientsIds = intersection(_product.ingredient_ids, searchIngredientIds)
+    /*
      * saving off new array on product that represents which ingredients matched the users search
      * I will later leverage this array to bolden the matching serch term in the UI
      */ 
-    product.matchingIngredientsIds = matchingIngredientsIds
+    _product.matchingIngredientsIds = matchingIngredientsIds
 
     // return boolean to indicate if product should be included in filter
-    return matchingIngredientsIds.length > 0
+    if (matchingIngredientsIds.length > 0) filtered.push(_product)
   })
 
+  // return the filtered array
   return filtered
 }
 export default resolveIngredientSearch
