@@ -31,7 +31,7 @@ function App() {
     <Container className='AppContainer' fluid>
       <Row justify='center'>
         {/* gutter */}
-        <Col xs={1} sm={3} lg={3}></Col>
+        <Col xs={1} sm={3} lg={4}></Col>
         <Col xs={10} sm={6} lg={4}>
           <div>
             <AppLogo />
