@@ -31,3 +31,11 @@ test('should not matter if there are any leading or trailing spaces', () => {
     expect(product.ingredient_ids).toContain(3) // 3 is the ID for Organic Banana
   }
 })
+
+test('should be case insensitive', () => {
+  const products = resolveIngredientSearch('ORGANIC banana')
+  expect(products.length).toEqual(4)
+  for (const product of products) { // loop over each product and check it includes ID for Organic Banana
+    expect(product.ingredient_ids).toContain(3) // 3 is the ID for Organic Banana
+  }
+})
