@@ -79,18 +79,18 @@ function IngredientSearch () {
 
 function App() {
   return (
-    <Container>
+    <Container fluid style={{minWidth: '320px'}}>
       <Row>
-        <Col sm={1}></Col>
-        <Col sm={10}>
-          <div className="App">
+        <Col xs={1} sm={3}></Col>
+        <Col xs={10} sm={6}>
+          <div>
             <Row>
               <img style={{width: '100%'}} src={logo} className="App-logo" alt="logo" />
             </Row>
             <IngredientSearch />
           </div>
         </Col>
-        <Col sm={1}></Col>
+        <Col xs={1} sm={6}></Col>
       </Row>
     </Container>
   );
