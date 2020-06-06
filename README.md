@@ -13,9 +13,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Additional Dependencies
 - lodash 
-  - This is a module that I've found myself using in every javascript/node project.  It is a modern JavaScript utility library that provides functionality such as ```map```, ```reduce```, ```forEach```, ```intersection```, ```filter```, etc.  The aim of this library is performance, modularity & extras (such as ```debounce```!). See lodash.com for more info
+  - This is a module that I've found myself using in every javascript/node project.  It is a modern JavaScript utility library that provides functionality such as ```map```, ```reduce```, ```forEach```, ```intersection```, ```filter```, etc.  The aim of this library is performance, modularity & extras (such as ```debounce```!). See [lodash](https://www.lodash.com) for more info
 - react-grid-system
-  - I wanted to make this app mobile responsive, so I decided to bring in a simple row and column system to help lay things out.  Normally, this would be provided from some UI library suite such as Bootstrap.js, but  react-grid-system is much lighter and will suite my needs better for this excerise. See github.com/sealninja/react-grid-system for more info
+  - I wanted to make this app mobile responsive, so I decided to bring in a simple row and column system to help lay things out.  Normally, this would be provided from some UI library suite such as Bootstrap.js, but  react-grid-system is much lighter and will suite my needs better for this excerise. See [react-grid-system](http://github.com/sealninja/react-grid-system) for more info
 
 ## Instructions
 
