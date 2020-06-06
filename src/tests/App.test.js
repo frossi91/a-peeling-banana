@@ -1,6 +1,7 @@
 import React from 'react';
 import { render, fireEvent, act } from '@testing-library/react';
-import App, { DEFAULT_INGREDIENT_SEARCH } from '../App';
+import { DEFAULT_INGREDIENT_SEARCH } from '../IngredientSearch'
+import App from '../App';
 
 /**
  * Testing App for component hook ups and reaction to user input
