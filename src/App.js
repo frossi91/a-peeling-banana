@@ -106,6 +106,18 @@ function IngredientSearch () {
   )
 }
 
+
+/**
+ * Might not be completely necessary for this to be it's own React Component, but in a production environment we might need to do more with the logo like grab a URL from a remote
+ */
+function AppLogo() {
+  return (
+    <Row>
+      <img className="AppLogo" src={logo} alt="logo" />
+    </Row>
+  )
+}
+
 /**
    * App is built off a simple grid system.  Usually this is provided through an entire UI library suite such as Bootstrap
    * Bringing in something like Bootstrap would give me a lot of stuff I do not need, so I found a nice grid system library to use instead
@@ -122,9 +134,7 @@ function App() {
         <Col xs={1} sm={3} lg={3}></Col>
         <Col xs={10} sm={6} lg={4}>
           <div>
-            <Row>
-              <img className="AppLogo" src={logo} alt="logo" />
-            </Row>
+            <AppLogo />
             <IngredientSearch />
           </div>
         </Col>
