@@ -1,16 +1,8 @@
 /**
  * Putting search logic in it's own file.  Ideally in a production environment, we would aim to do this search serverside with full text search support.
  */
-
-// data imports
 import { products } from '../data/products.json'
 import { ingredients } from '../data/ingredients.json'
-
-/**
- * lodash imports
- * I'm a big fan of this library.  I think I've probably included it in every node project I've built.
- * A lot of this functionality is now baseline with ES6+, but lodash aims to optimize commonly used intertee functions
- */
 import find from 'lodash/find'
 import reduce from 'lodash/reduce'
 import includes from 'lodash/includes'
