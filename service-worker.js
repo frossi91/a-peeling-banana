@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/a-peeling-banana/precache-manifest.6c6066029f5ae15c9ae941a934c7dd03.js"
+  "/a-peeling-banana/precache-manifest.60f8c8c2c3cf09ffa04f9ac6fc18f4cd.js"
 );
 
 self.addEventListener('message', (event) => {

@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/a-peeling-banana/static/css/main.27367c5c.chunk.css",
-    "main.js": "/a-peeling-banana/static/js/main.94155efe.chunk.js",
-    "main.js.map": "/a-peeling-banana/static/js/main.94155efe.chunk.js.map",
+    "main.js": "/a-peeling-banana/static/js/main.f6115b80.chunk.js",
+    "main.js.map": "/a-peeling-banana/static/js/main.f6115b80.chunk.js.map",
     "runtime-main.js": "/a-peeling-banana/static/js/runtime-main.e39cef41.js",
     "runtime-main.js.map": "/a-peeling-banana/static/js/runtime-main.e39cef41.js.map",
     "static/js/2.285635ac.chunk.js": "/a-peeling-banana/static/js/2.285635ac.chunk.js",
     "static/js/2.285635ac.chunk.js.map": "/a-peeling-banana/static/js/2.285635ac.chunk.js.map",
     "index.html": "/a-peeling-banana/index.html",
-    "precache-manifest.6c6066029f5ae15c9ae941a934c7dd03.js": "/a-peeling-banana/precache-manifest.6c6066029f5ae15c9ae941a934c7dd03.js",
+    "precache-manifest.60f8c8c2c3cf09ffa04f9ac6fc18f4cd.js": "/a-peeling-banana/precache-manifest.60f8c8c2c3cf09ffa04f9ac6fc18f4cd.js",
     "service-worker.js": "/a-peeling-banana/service-worker.js",
     "static/css/main.27367c5c.chunk.css.map": "/a-peeling-banana/static/css/main.27367c5c.chunk.css.map",
     "static/js/2.285635ac.chunk.js.LICENSE.txt": "/a-peeling-banana/static/js/2.285635ac.chunk.js.LICENSE.txt",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.e39cef41.js",
     "static/js/2.285635ac.chunk.js",
     "static/css/main.27367c5c.chunk.css",
-    "static/js/main.94155efe.chunk.js"
+    "static/js/main.f6115b80.chunk.js"
   ]
 }
