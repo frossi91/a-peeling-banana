@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/a-peeling-banana/static/css/main.27367c5c.chunk.css",
+    "main.css": "/a-peeling-banana/static/css/main.b331a8e9.chunk.css",
     "main.js": "/a-peeling-banana/static/js/main.3f7830dd.chunk.js",
     "main.js.map": "/a-peeling-banana/static/js/main.3f7830dd.chunk.js.map",
     "runtime-main.js": "/a-peeling-banana/static/js/runtime-main.e39cef41.js",
@@ -8,16 +8,16 @@
     "static/js/2.93bf9652.chunk.js": "/a-peeling-banana/static/js/2.93bf9652.chunk.js",
     "static/js/2.93bf9652.chunk.js.map": "/a-peeling-banana/static/js/2.93bf9652.chunk.js.map",
     "index.html": "/a-peeling-banana/index.html",
-    "precache-manifest.5a2b4411227699572b9f17f95b497ea0.js": "/a-peeling-banana/precache-manifest.5a2b4411227699572b9f17f95b497ea0.js",
+    "precache-manifest.f6782ea365a0c66544c24fa78024342b.js": "/a-peeling-banana/precache-manifest.f6782ea365a0c66544c24fa78024342b.js",
     "service-worker.js": "/a-peeling-banana/service-worker.js",
-    "static/css/main.27367c5c.chunk.css.map": "/a-peeling-banana/static/css/main.27367c5c.chunk.css.map",
+    "static/css/main.b331a8e9.chunk.css.map": "/a-peeling-banana/static/css/main.b331a8e9.chunk.css.map",
     "static/js/2.93bf9652.chunk.js.LICENSE.txt": "/a-peeling-banana/static/js/2.93bf9652.chunk.js.LICENSE.txt",
     "static/media/daily-harvest-logo.jpg": "/a-peeling-banana/static/media/daily-harvest-logo.68c0e9f0.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.e39cef41.js",
     "static/js/2.93bf9652.chunk.js",
-    "static/css/main.27367c5c.chunk.css",
+    "static/css/main.b331a8e9.chunk.css",
     "static/js/main.3f7830dd.chunk.js"
   ]
 }
