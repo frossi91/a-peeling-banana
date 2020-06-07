@@ -16,23 +16,24 @@ export const DEFAULT_DEBOUNCE_MILLISECONDS = 300
  * in a real world scenario, we would probably just initialize the search to be empty
  */
 const DEFAULT_SEARCH_RESULTS = resolveIngredientSearch(DEFAULT_INGREDIENT_SEARCH)
+
 /**
  * Main component that drives the search
- * holds state for loading, user input, and search results
- * renders and Input and one of:
+ * Holds state for loading, user input, and search results
+ * Renders and <input> and one of:
  *   loading indicator
  *   a no results message
- *   <ProductList /> - React Component responsible for displaying a list of products
+ *   a <ProductList /> - React Component responsible for displaying a list of products
  */
 function IngredientSearch () {
   const [loading, setLoading] = useState(false)  // initialize loading state to false
   const [searchValue, setSearchValue] = useState(DEFAULT_INGREDIENT_SEARCH)  // initialize searchValue state to a default search term
-  const [searchResults, setSearchResults] = useState(DEFAULT_SEARCH_RESULTS) // initialize searchResults default results that were calculated at bootstrap of app
+  const [searchResults, setSearchResults] = useState(DEFAULT_SEARCH_RESULTS) // initialize searchResults to the default results that were calculated at bootstrap of app
   
   /**
-   * following block of code defines a function to be called delayedSearch
-   * it wrapped in a debounce so we don't execute the search until the user finishes typing (currently 300ms delay)
-   * it also adds an artifical delay of DEFAUL_SIMULATED_NETWORK_DELAY (currently 150 ms) to simulate a call to some remote
+   * Following block of code defines a function which I store to the variable titled debouncedSearch
+   * It is wrapped in a debounce, which makes it so we won't execute the search until the user done typing (currently 300ms)
+   * It also adds an artifical delay of DEFAULT_SIMULATED_NETWORK_DELAY to simulate the time it would take to fetch some data from a remote server (currently 100 ms) 
    */
   const debouncedSearch = useRef(debounce(async (_searchValue) => {
     await new Promise(resolve => setTimeout(resolve, DEFAULT_SIMULATED_NETWORK_DELAY_MILLISECONDS)) // artificial delay using Promise + setTimeout
@@ -42,18 +43,21 @@ function IngredientSearch () {
   }, DEFAULT_DEBOUNCE_MILLISECONDS, {trailing: true})).current
 
   /**
-   * change listener for input
-   * sets the searchValue state to what the user typed in the input
-   * invokes a delayedSearch with the serachValue
+   * onChange listener for input
+   * Sets the searchValue state to what the user typed in the input
+   * Invokes a delayedSearch with the trimmed serachValue
    */
   const handleInputChange = (e) => {
     setLoading(true) // setting loading to true here to account for the debounce time as well as simulated network time
-    setSearchValue(e.target.value)  // set the searchValue state
+    setSearchValue(e.target.value)  // set the searchValue state to the value of the <input>
     debouncedSearch(e.target.value.trim()) // call our network simulated debouncedSearch with the trimmed input
   }
 
   /**
-   * Builder function that returns loading indicator, or a message indicating no results
+   * Builder function that returns either:
+   *   a loading indicator
+   *     or
+   *   a message indicating no results
    */
   const buildLoadingOrNoResults = () => {
     if (loading) return <div className="Loader"></div> // if we are loading, then return the loader
@@ -72,9 +76,9 @@ function IngredientSearch () {
 
   /**
    * Return JSX
-   * Tow Rows
-   *   - input for search
-   *   - loading indicator || "no results message" || <ProductList />
+   * Tow Rows system
+   *   - first row is for the input
+   *   - second row is for the loading indicator, <ProductList />, or a "no results" style message
    */
   return (
     <React.Fragment>
