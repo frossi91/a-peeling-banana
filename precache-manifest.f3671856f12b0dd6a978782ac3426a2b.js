@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "322dd442967ced559fcdf989bbf7d870",
+    "revision": "82d3b05a57f902b5d99d05d85b5ba4e2",
     "url": "/a-peeling-banana/index.html"
   },
   {
