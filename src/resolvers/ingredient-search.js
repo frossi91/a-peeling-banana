@@ -3,6 +3,8 @@
  */
 import { products } from '../data/products.json'
 import { ingredients } from '../data/ingredients.json'
+import productImages from '../data/product-images.json'
+
 import find from 'lodash/find'
 import reduce from 'lodash/reduce'
 import includes from 'lodash/includes'
@@ -61,6 +63,11 @@ function resolveIngredientSearch(searchTerm) {
 
     // if the intersecting array length is greater than 0, we have a match so push the product into the resulting array
     if (matchingIngredientsIds.length > 0) filtered.push(_product)
+    /**
+     * one of the last things I'm adding here at Sunday morning after taking a final pass at the project
+     * realized it would be cool for the user to be able to search "Smoothie" or "Bowl" and get some results
+     */
+    else if (includes(product.collection.toLowerCase(), searchTerm)) filtered.push(_product)
   })
 
   // return the filtered array
@@ -75,4 +82,13 @@ export default resolveIngredientSearch
  */
 export const getIngredientById = (ingredientId) => {
   return find(ingredients, (ingredient) => ingredient.id === ingredientId)
+}
+
+/**
+ * getImageUrlByProductId
+ * @param {Int} productId
+ * get the image url of the product
+ */
+export const getImageUrlByProductId = (productId) => {
+  return productImages[productId]
 }
