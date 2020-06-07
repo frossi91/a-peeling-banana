@@ -13,6 +13,7 @@ export const DEFAULT_DEBOUNCE_MILLISECONDS = 300
  * here i am running the search algorithm at bootstrap of the application.
  * this is done only to be technically correct in solving the problem,
  * that is, 'please write a program that returns all of the products that contain the ingredient "Organic Banana"'
+ * in a real world scenario, we would probably just initialize the search to be empty
  */
 const DEFAULT_SEARCH_RESULTS = resolveIngredientSearch(DEFAULT_INGREDIENT_SEARCH)
 /**
