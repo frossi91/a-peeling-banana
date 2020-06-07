@@ -29,6 +29,10 @@ function ProductList ({ products, searchValue }) {
   )
 }
 
+/**
+ * This is to ensure the ProductCard only preforms a re-render if the product it is listening to has changed.
+ * Otherwise, updates would run for every card on the screen even if it's product hasn't changed
+ */
 const MemoizedProductCard = memo(ProductCard, (prevProps, nextProps) => {
   return isEqual(prevProps.product, nextProps.product)
 })
