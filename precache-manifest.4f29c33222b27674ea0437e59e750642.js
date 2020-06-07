@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "82d3b05a57f902b5d99d05d85b5ba4e2",
+    "revision": "4bbbf4d76b7d610e0fa365705da92550",
     "url": "/a-peeling-banana/index.html"
   },
   {
-    "revision": "cc90223b8e324cb65ea5",
+    "revision": "498780ddd83b367491be",
     "url": "/a-peeling-banana/static/css/main.b331a8e9.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/a-peeling-banana/static/js/2.93bf9652.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cc90223b8e324cb65ea5",
-    "url": "/a-peeling-banana/static/js/main.4f2d1a94.chunk.js"
+    "revision": "498780ddd83b367491be",
+    "url": "/a-peeling-banana/static/js/main.32495e2f.chunk.js"
   },
   {
     "revision": "a39a94c9c22fc15ff51f",
