@@ -1,9 +1,7 @@
 import './App.css'
 import React from 'react'
 import { Container, Row, Col } from 'react-grid-system';
-import includes from 'lodash/includes'
 import logo from './assets/daily-harvest-logo.jpg'
-import { getIngredientById } from './resolvers/ingredient-search'
 
 import IngredientSearch from './IngredientSearch'
 
