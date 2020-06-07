@@ -78,7 +78,7 @@ function IngredientSearch () {
 
   /**
    * Return JSX
-   * Tow Rows system
+   * Tow Row system
    *   - first row is for the input
    *   - second row is for the loading indicator, <ProductList />, or a "no results" style message
    */

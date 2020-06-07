@@ -21,7 +21,7 @@ function resolveIngredientSearch(searchTerm) {
   /**
    * sanitize the input by trimming away any trailing spaces
    * lowercase the input for text comparison so our search is case-insensitive
-   * technically this is a second trim() since the component already trimed the value on the component side...but wanted to keep this here to simulate a server environment
+   * technically this is a second trim() since the component already trimed the value on it's side...but wanted to keep this here to simulate a server environment
    */
   const _searchTerm = searchTerm.trim().toLowerCase()
   
@@ -59,7 +59,7 @@ function resolveIngredientSearch(searchTerm) {
      */ 
     _product.matchingIngredientsIds = matchingIngredientsIds
 
-    // return boolean to indicate if product should be included in filter
+    // if the intersecting array length is greater than 0, we have a match so push the product into the resulting array
     if (matchingIngredientsIds.length > 0) filtered.push(_product)
   })
 

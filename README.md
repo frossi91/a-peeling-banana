@@ -1,6 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## A Peeling Banana
 - A Peeling Banana is an application where a user can search for some very. . . *appealing bananas* . . . <br />
+- Please forgive my terrible pun
 - This project is hosted via Github Pages and can be found [here](http://frossi91.github.io/a-peeling-banana)<br />
 - It is also mobile responsive so please try it out on iOS/Android!
 - The App is bootstrapped with a search value of "Organic Banana" and renders a filtered list of products that contain that ingredient<br />
@@ -37,5 +38,3 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 ### `npm run deploy`
 
 Builds the app for production to and deploys it to Github Pages.  For more information see the "deploy" script in package.json
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
