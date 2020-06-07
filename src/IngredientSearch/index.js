@@ -8,7 +8,13 @@ export const DEFAULT_INGREDIENT_SEARCH = 'Organic Banana'
 export const DEFAULT_PLACEHOLDER_TEXT = 'Hungry for ...'
 export const DEFAULT_SIMULATED_NETWORK_DELAY_MILLISECONDS = 100
 export const DEFAULT_DEBOUNCE_MILLISECONDS = 300
-export const DEFAULT_SEARCH_RESULTS = resolveIngredientSearch(DEFAULT_INGREDIENT_SEARCH)
+
+/**
+ * here i am running the search algorithm at bootstrap of the application.
+ * this is done only to be technically correct in solving the problem,
+ * that is, 'please write a program that returns all of the products that contain the ingredient "Organic Banana"'
+ */
+const DEFAULT_SEARCH_RESULTS = resolveIngredientSearch(DEFAULT_INGREDIENT_SEARCH)
 /**
  * Main component that drives the search
  * holds state for loading, user input, and search results

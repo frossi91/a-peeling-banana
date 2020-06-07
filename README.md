@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - The search works off an includes, so it supports partial matches. This way a user can search a value such as "Organic" and see all products with "Organic" in the name<br />
 - The search is case-insensitive
 - The resulting ingredient that triggered a match is bolded to indicate to the user why that specific result was returned in their search <br />
-- There is a simulated network delay of 150ms, as well as a debounce around the function that performs the search.  This way we can support showing a loading indicator to the user<br />
+- There is a simulated network delay of 100ms, as well as a debounce of 300 ms around the function that performs the search.  This way we can support showing a loading indicator to the user<br />
 - Test files can be found under the src/tests directory, and can be run with the command ```npm test``` 
 
 ## Additional Dependencies
