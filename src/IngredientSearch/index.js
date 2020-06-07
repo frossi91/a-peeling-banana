@@ -60,16 +60,18 @@ function IngredientSearch () {
    *   a message indicating no results
    */
   const buildLoadingOrNoResults = () => {
-    if (loading) return <div className="Loader"></div> // if we are loading, then return the loader
+    if (loading) return <Row><div className="Loader"></div></Row>// if we are loading, then return the loader
     if (searchValue && searchResults.length === 0) { // if loading is false, searchValue is defined (the user has entered text), and the result array is 0, then return a "no results" type of messaging
       return (
-        <Col>
-          <div araia-label='no-result-div' className="SorryMessage">
-            <span>{`Sorry! Looks like we are fresh out of`}</span>
-            <br></br>
-            <span><i>{`"${searchValue}"`}</i></span>
-          </div>
-        </Col>
+        <Row>
+          <Col>
+            <div araia-label='no-result-div' className="SorryMessage">
+              <span>{`Sorry! Looks like we are fresh out of`}</span>
+              <br></br>
+              <span><i>{`"${searchValue}"`}</i></span>
+            </div>
+          </Col>
+        </Row>
       )
     }
   }
@@ -85,11 +87,9 @@ function IngredientSearch () {
       <Row>
         <input aria-label='ingredient-search' className="SearchInput" placeholder={DEFAULT_PLACEHOLDER_TEXT} value={searchValue} type='search' onChange={handleInputChange}></input>
       </Row>
-      <Row>
-        { 
-          loading || searchResults.length === 0 ? buildLoadingOrNoResults() : <ProductList products={searchResults} searchValue={searchValue}/>
-        }
-      </Row>
+      { 
+        loading || searchResults.length === 0 ? buildLoadingOrNoResults() : <ProductList products={searchResults} searchValue={searchValue}/>
+      }
     </React.Fragment>
   )
 }
