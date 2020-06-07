@@ -39,3 +39,13 @@ test('should be case insensitive', () => {
     expect(product.ingredient_ids).toContain(3) // 3 is the ID for Organic Banana
   }
 })
+
+test('should search against the collection', () => {
+  const products = resolveIngredientSearch('smoothie')
+  expect(products.length).toEqual(3) // 3 smoothies in db
+})
+
+test('should be case insensitive search agains the collection', () => {
+  const products = resolveIngredientSearch('SMOOTHIE')
+  expect(products.length).toEqual(3)
+})

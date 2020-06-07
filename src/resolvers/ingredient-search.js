@@ -63,11 +63,12 @@ function resolveIngredientSearch(searchTerm) {
 
     // if the intersecting array length is greater than 0, we have a match so push the product into the resulting array
     if (matchingIngredientsIds.length > 0) filtered.push(_product)
+
     /**
      * one of the last things I'm adding here at Sunday morning after taking a final pass at the project
      * realized it would be cool for the user to be able to search "Smoothie" or "Bowl" and get some results
      */
-    else if (includes(product.collection.toLowerCase(), searchTerm)) filtered.push(_product)
+    else if (includes(product.collection.toLowerCase(), _searchTerm)) filtered.push(_product)
   })
 
   // return the filtered array
