@@ -5,16 +5,17 @@ import { getIngredientById } from '../resolvers/ingredient-search'
  * 
  * props {
  *   products: [Product],
- *   searchValue: String,
- *   loading: Boolean
+ *   searchValue: String
  * } 
  * 
- * ProductList component is responsible for display a list of products.
+ * ProductList component is responsible for displaying a list of products.
  * It is fed an array of products to display in a list style fasion
  * It is also fed the users searchValue so it can bolden the matching search term
+ * Right now it's still pretty ugly 
  */
-function ProductList ({ products, searchValue }) {
 
+// TODO: Would be really cool if we could render card style components with the Produce Name, Ingredient List, and some stock images of the Product.  But for now it's just some simple text results
+function ProductList ({ products, searchValue }) {
   /**
    * Builder function responsible for building the bolded ingredient text for search match
    * @param { id: Int, name: String, is_allergen: Boolean } ingredient 
@@ -29,7 +30,7 @@ function ProductList ({ products, searchValue }) {
 
     const prefixedText = ingredientName.substring(0, startIndex) // create a substring for any potential characters before the match
     const boldedText = ingredientName.substring(startIndex, endIndex) // create a substring that is characters that match the search and thus should be bold
-    const postText = ingredientName.substring(endIndex, ingredientName.length) //create a substring for any potential characters after the match
+    const postText = ingredientName.substring(endIndex, ingredientName.length) // create a substring for any potential characters after the match
 
     // return the combined text
     return (
@@ -44,10 +45,10 @@ function ProductList ({ products, searchValue }) {
    * @param { id: Int, name: String, collection: String, ingredient_ids: [Int], matchingIngredientIds: [Int] } product 
    */
   const buildIngredientListItems = (product) => {
-    return product.ingredient_ids.map(ingredientId => { // loop over product.ingredient_ids
+    return product.ingredient_ids.map(ingredientId => { // loop over products ingredients
       const ingredient = getIngredientById(ingredientId) // get the ingredient by it's id
       
-      if (!ingredient) return null // we could not find the given ingredient, skip it for now **come back to this if I have time**
+      if (!ingredient) return null // we could not find the given ingredient, skip it for now **come back to this if I have time, shouldn't ever occur since we are dealing with local data files**
       
       if (includes(product.matchingIngredientsIds, ingredientId)) { // check if the current ingredient is in the matching array
         return buildBoldedIngredient(ingredient, searchValue)  // if it is, build bolded <li>
@@ -56,9 +57,9 @@ function ProductList ({ products, searchValue }) {
   }
   
   /**
-   * build an array of <li> to be fed into the parent <ul>
-   * each <li> is represents a product
-   * each product has it's own inner <ul> for it's ingredients
+   * Build an array of <li> to be fed into the parent <ul>
+   * Each <li> represents a product
+   * Each product has it's own inner <ul> for it's ingredients
    */
   const productListItems = products.map(product => {
     return (
@@ -71,7 +72,7 @@ function ProductList ({ products, searchValue }) {
     )
   })
 
-  // return the enture <ul> and it's child <li>s
+  // return the enture <ul> and it's child product <li>s
   return (
     <ul aria-label='product-list'>
       {productListItems}
