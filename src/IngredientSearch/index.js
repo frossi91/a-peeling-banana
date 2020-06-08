@@ -5,7 +5,7 @@ import resolveIngredientSearch from '../resolvers/ingredient-search'
 import ProductList from './ProductList'
 
 export const DEFAULT_INGREDIENT_SEARCH = 'Organic Banana'
-export const DEFAULT_PLACEHOLDER_TEXT = 'Hungry for ...'
+export const DEFAULT_PLACEHOLDER_TEXT = 'Hungry for . . .'
 export const DEFAULT_SIMULATED_NETWORK_DELAY_MILLISECONDS = 100
 export const DEFAULT_DEBOUNCE_MILLISECONDS = 300
 
@@ -84,7 +84,7 @@ function IngredientSearch () {
    */
   return (
     <React.Fragment>
-      <Row>
+      <Row justify='center'>
         <input aria-label='ingredient-search' className="SearchInput" placeholder={DEFAULT_PLACEHOLDER_TEXT} value={searchValue} type='search' onChange={handleInputChange}></input>
       </Row>
       { 

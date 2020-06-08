@@ -13,7 +13,7 @@
 }
 
 .SearchInput {
-  width: 100%;
+  width: 50%;
   padding: 10px 16px;
   margin: 8px 0;
   box-sizing: border-box;
@@ -59,7 +59,9 @@
 
 @media screen and ( max-width: 1440px ) {
   .Card {
-    height: auto;
+    width: 100%;
+  }
+  .SearchInput {
     width: 100%;
   }
 }
