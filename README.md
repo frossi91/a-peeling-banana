@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## A Peeling Banana
 - A Peeling Banana is an application where a user can search for some very. . . *appealing bananas* . . . <br />
 - Please forgive my terrible pun
-- This project is hosted via Github Pages and can be found [here](http://frossi91.github.io/a-peeling-banana)<br />
+- This project is hosted via Github Pages and can be found [here](http://frankros91.github.io/a-peeling-banana)<br />
 - It is also mobile responsive so please try it out on iOS/Android!
 - The App is bootstrapped with a search value of "Organic Banana" and renders a filtered list of products that contain that ingredient<br />
 - After that, the user is free to clear out the input and search for other ingredients<br />
